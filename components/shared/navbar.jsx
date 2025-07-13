@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-center w-full py-6 px-4">
-      <div className="flex items-center justify-between px-4 py-2  rounded-xl shadow-lg dark:shadow-gray-800/20 w-full max-w-xl relative z-10 border border-gray-200 dark:border-gray-700">
+      <div className="flex items-center justify-between px-4 py-2  rounded-xl shadow-lg dark:shadow-gray-800/20 w-full max-w-lg relative z-10 border border-gray-200 dark:border-gray-700">
         <div className="flex items-center">
           <div className="w-8 h-8 mr-6">
             <Logo />
