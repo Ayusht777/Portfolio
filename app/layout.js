@@ -1,5 +1,6 @@
 // app/layout.js
 import { ThemeProvider } from "@/components/theme-provider"
+import { Navbar } from "@/components/shared/navbar"
 import "./globals.css"
 
 export default function RootLayout({ children }) {
@@ -8,10 +9,11 @@ export default function RootLayout({ children }) {
       <body>
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>
