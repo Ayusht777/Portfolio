@@ -70,41 +70,68 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.141 0.005 285.823);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.141 0.005 285.823);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.141 0.005 285.823);
-  --primary: oklch(0.21 0.006 285.885);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.967 0.001 286.375);
-  --secondary-foreground: oklch(0.21 0.006 285.885);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.21 0.006 285.885);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.705 0.015 286.067);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-primary: oklch(0.21 0.006 285.885);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.705 0.015 286.067);
+  
+  /* MAIN COLORS - Foundation of your portfolio */
+  --background: oklch(1 0 0); /* Main page background - use for body, sections */
+  --foreground: oklch(0.141 0.005 285.823); /* Main text color - use for paragraphs, descriptions */
+  
+  /* CARD COLORS - Perfect for project cards, about sections */
+  --card: oklch(1 0 0); /* Background for project cards, skill cards */
+  --card-foreground: oklch(0.141 0.005 285.823); /* Text inside cards */
+  
+  /* POPOVER COLORS - Great for tooltips, dropdowns */
+  --popover: oklch(1 0 0); /* Background for tooltips, modal backgrounds */
+  --popover-foreground: oklch(0.141 0.005 285.823); /* Text in tooltips */
+  
+  /* PRIMARY COLORS - Use for main branding, important elements */
+  --primary: oklch(0.21 0.006 285.885); /* MAIN TITLES, hero headings, nav links, CTA buttons */
+  --primary-foreground: oklch(0.985 0 0); /* Text on primary colored backgrounds */
+  
+  /* SECONDARY COLORS - Supporting elements */
+  --secondary: oklch(0.967 0.001 286.375); /* Secondary buttons, less important sections */
+  --secondary-foreground: oklch(0.21 0.006 285.885); /* Text on secondary backgrounds */
+  
+  /* MUTED COLORS - Subtle elements, less important text */
+  --muted: oklch(0.967 0.001 286.375); /* Subtle backgrounds, inactive states */
+  --muted-foreground: oklch(0.552 0.016 285.938); /* SUBHEADINGS, captions, metadata, dates */
+  
+  /* ACCENT COLORS - For highlighting, hover states */
+  --accent: oklch(0.967 0.001 286.375); /* Hover states, highlighted elements */
+  --accent-foreground: oklch(0.21 0.006 285.885); /* Text on accent backgrounds */
+  
+  /* DESTRUCTIVE COLORS - Error states, delete buttons */
+  --destructive: oklch(0.577 0.245 27.325); /* Error messages, delete buttons */
+  
+  /* BORDER & INPUT COLORS - UI elements */
+  --border: oklch(0.92 0.004 286.32); /* Card borders, dividers, section separators */
+  --input: oklch(0.92 0.004 286.32); /* Contact form inputs, search boxes */
+  --ring: oklch(0.705 0.015 286.067); /* Focus rings on interactive elements */
+  
+  /* CHART COLORS - For data visualization, skill levels */
+  --chart-1: oklch(0.646 0.222 41.116); /* Skill progress bars, chart data */
+  --chart-2: oklch(0.6 0.118 184.704); /* Different skill categories */
+  --chart-3: oklch(0.398 0.07 227.392); /* Technology stack visualization */
+  --chart-4: oklch(0.828 0.189 84.429); /* Project timeline, experience levels */
+  --chart-5: oklch(0.769 0.188 70.08); /* Additional data categories */
+  
+  /* SIDEBAR COLORS - Navigation, menu systems */
+  --sidebar: oklch(0.985 0 0); /* Side navigation background */
+  --sidebar-foreground: oklch(0.141 0.005 285.823); /* Navigation text */
+  --sidebar-primary: oklch(0.21 0.006 285.885); /* Active nav items */
+  --sidebar-primary-foreground: oklch(0.985 0 0); /* Text on active nav items */
+  --sidebar-accent: oklch(0.967 0.001 286.375); /* Hover states in navigation */
+  --sidebar-accent-foreground: oklch(0.21 0.006 285.885); /* Text on hover states */
+  --sidebar-border: oklch(0.92 0.004 286.32); /* Navigation borders */
+  --sidebar-ring: oklch(0.705 0.015 286.067); /* Focus states in navigation */
+  
   --destructive-foreground: oklch(1 0 0);
-  --font-sans: Geist, sans-serif;
-  --font-serif: Georgia, serif;
-  --font-mono: Geist Mono, monospace;
+  
+  /* TYPOGRAPHY - Font stacks for different content types */
+  --font-sans: Geist, sans-serif; /* Main content, UI text */
+  --font-serif: Georgia, serif; /* Blog posts, formal content */
+  --font-mono: Geist Mono, monospace; /* Code snippets, technical content */
+  
+  /* SHADOWS - Depth and elevation */
   --shadow-color: hsl(0 0% 0%);
   --shadow-opacity: 0.18;
   --shadow-blur: 2px;
@@ -113,41 +140,52 @@
   --shadow-offset-y: 1px;
   --letter-spacing: 0em;
   --spacing: 0.25rem;
-  --shadow-2xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.09);
-  --shadow-xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.09);
-  --shadow-sm: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 1px 2px -1px hsl(0 0% 0% / 0.18);
-  --shadow: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 1px 2px -1px hsl(0 0% 0% / 0.18);
-  --shadow-md: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 2px 4px -1px hsl(0 0% 0% / 0.18);
-  --shadow-lg: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 4px 6px -1px hsl(0 0% 0% / 0.18);
-  --shadow-xl: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 8px 10px -1px hsl(0 0% 0% / 0.18);
-  --shadow-2xl: 0px 1px 2px 0px hsl(0 0% 0% / 0.45);
+  --shadow-2xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.09); /* Subtle card shadows */
+  --shadow-xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.09); /* Small element shadows */
+  --shadow-sm: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 1px 2px -1px hsl(0 0% 0% / 0.18); /* Project card shadows */
+  --shadow: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 1px 2px -1px hsl(0 0% 0% / 0.18); /* Default shadow */
+  --shadow-md: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 2px 4px -1px hsl(0 0% 0% / 0.18); /* Featured project shadows */
+  --shadow-lg: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 4px 6px -1px hsl(0 0% 0% / 0.18); /* Hero section shadows */
+  --shadow-xl: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 8px 10px -1px hsl(0 0% 0% / 0.18); /* Modal shadows */
+  --shadow-2xl: 0px 1px 2px 0px hsl(0 0% 0% / 0.45); /* Dramatic shadows */
   --tracking-normal: 0em;
 }
 
+/* DARK MODE - Adjusted colors for dark theme */
 .dark {
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.985 0 0);
+  --background: oklch(0.141 0.005 285.823); /* Dark background */
+  --foreground: oklch(0.985 0 0); /* Light text on dark background */
+  
+  --card: oklch(0.21 0.006 285.885); /* Darker cards */
+  --card-foreground: oklch(0.985 0 0); /* Light text on dark cards */
+  
   --popover: oklch(0.21 0.006 285.885);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.92 0.004 286.32);
+  
+  --primary: oklch(0.92 0.004 286.32); /* Lighter primary for dark mode */
   --primary-foreground: oklch(0.21 0.006 285.885);
+  
   --secondary: oklch(0.274 0.006 286.033);
   --secondary-foreground: oklch(0.985 0 0);
+  
   --muted: oklch(0.274 0.006 286.033);
   --muted-foreground: oklch(0.705 0.015 286.067);
+  
   --accent: oklch(0.274 0.006 286.033);
   --accent-foreground: oklch(0.985 0 0);
+  
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
+  --border: oklch(1 0 0 / 10%); /* Subtle borders in dark mode */
+  --input: oklch(1 0 0 / 15%); /* Slightly visible inputs */
   --ring: oklch(0.552 0.016 285.938);
+  
+  /* DARK MODE CHART COLORS - Adjusted for dark backgrounds */
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
+  
   --sidebar: oklch(0.21 0.006 285.885);
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-primary: oklch(0.488 0.243 264.376);
@@ -157,6 +195,7 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.552 0.016 285.938);
   --destructive-foreground: oklch(0 0 0);
+  
   --radius: 0.5rem;
   --font-sans: Geist, sans-serif;
   --font-serif: Georgia, serif;
