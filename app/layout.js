@@ -5,8 +5,8 @@ import "./globals.css"
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body>
+    <html lang="en"  suppressHydrationWarning>
+      <body className="bg-background">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
