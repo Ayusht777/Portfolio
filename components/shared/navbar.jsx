@@ -12,21 +12,19 @@ const Navbar = () => {
   const { theme, setTheme } = useTheme();
 
   const toggleMenu = () => setIsOpen(!isOpen);
-
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
+  const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
 
   return (
     <div className="flex justify-center w-full py-6 px-4">
-      <div className="flex items-center justify-between px-4 py-2  rounded-xl shadow-lg dark:shadow-gray-800/20 w-full max-w-lg relative z-10 border border-gray-200 dark:border-gray-700">
+      <div className="flex items-center justify-between px-4 py-2 rounded-xl shadow-lg dark:shadow-gray-800/20 w-full max-w-lg relative z-10 border border-gray-200 dark:border-gray-700">
+        {/* Logo (left) */}
         <div className="flex items-center">
           <div className="w-8 h-8 mr-6">
             <Logo />
           </div>
         </div>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation (center) */}
         <nav className="hidden md:flex items-center space-x-8">
           {["Home", "Pricing", "Docs", "Projects"].map((item) => (
             <div key={item}>
@@ -40,36 +38,36 @@ const Navbar = () => {
           ))}
         </nav>
 
-        {/* Desktop Actions */}
-        <div className="hidden md:flex items-center space-x-3">
-          {/* Theme Toggle Button */}
-          <button
-            onClick={toggleTheme}
-            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-          >
-            {theme === "dark" ? (
-              <Sun className="h-4 w-4 text-gray-900 dark:text-gray-100" />
-            ) : (
-              <Moon className="h-4 w-4 text-gray-900 dark:text-gray-100" />
-            )}
+        {/* Right side: Desktop actions & Mobile hamburger */}
+        <div className="flex items-center space-x-3">
+          {/* Desktop Actions */}
+          <div className="hidden md:flex items-center space-x-3">
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            >
+              {theme === "dark" ? (
+                <Sun className="h-4 w-4 text-gray-900 dark:text-gray-100" />
+              ) : (
+                <Moon className="h-4 w-4 text-gray-900 dark:text-gray-100" />
+              )}
+            </button>
+          </div>
+          {/* Mobile hamburger */}
+          <button className="md:hidden flex items-center" onClick={toggleMenu}>
+            <Menu className="h-6 w-6 text-gray-900 dark:text-gray-100" />
           </button>
         </div>
-
-        {/* Mobile Menu Button */}
-        <button className="md:hidden flex items-center" onClick={toggleMenu}>
-          <Menu className="h-6 w-6 text-gray-900 dark:text-gray-100" />
-        </button>
       </div>
 
       {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="fixed inset-0  z-50 pt-24 px-6 md:hidden">
+        <div className="fixed inset-0 z-50 pt-24 px-6 md:hidden">
           <button className="absolute top-6 right-6 p-2" onClick={toggleMenu}>
             <X className="h-6 w-6 text-gray-900 dark:text-gray-100" />
           </button>
-
           <div className="flex flex-col space-y-6">
-            {["Home", "Pricing", "Docs", "Projects"].map((item, i) => (
+            {["Home", "Pricing", "Docs", "Projects"].map((item) => (
               <div key={item}>
                 <Link
                   href="#"
@@ -80,7 +78,6 @@ const Navbar = () => {
                 </Link>
               </div>
             ))}
-
             {/* Mobile Theme Toggle */}
             <div className="flex items-center justify-between py-3 border-t border-gray-200 dark:border-gray-700">
               <span className="text-base text-gray-900 dark:text-gray-100 font-medium">
