@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-background: oklch(0 0 0);
+  --color-foreground: oklch(1 0 0);
+  --color-card: oklch(0.1400 0 0);
+  --color-card-foreground: oklch(1 0 0);
+  --color-popover: oklch(0.1800 0 0);
+  --color-popover-foreground: oklch(1 0 0);
+  --color-primary: oklch(0.6630 0.1919 38.3911);
+  --color-primary-foreground: oklch(0 0 0);
+  --color-secondary: oklch(0.2500 0 0);
+  --color-secondary-foreground: oklch(1 0 0);
+  --color-muted: oklch(0.2300 0 0);
+  --color-muted-foreground: oklch(0.7200 0 0);
+  --color-accent: oklch(0.3200 0 0);
+  --color-accent-foreground: oklch(1 0 0);
+  --color-destructive: oklch(0.6900 0.2000 23.9100);
+  --color-destructive-foreground: oklch(0 0 0);
+  --color-border: oklch(0.2600 0 0);
+  --color-input: oklch(0.3200 0 0);
+  --color-ring: oklch(0.7200 0 0);
+  --color-chart-1: oklch(0.8100 0.1700 75.3500);
+  --color-chart-2: oklch(0.5800 0.2100 260.8400);
+  --color-chart-3: oklch(0.5600 0 0);
+  --color-chart-4: oklch(0.4400 0 0);
+  --color-chart-5: oklch(0.9200 0 0);
+  --color-sidebar: oklch(0.1800 0 0);
+  --color-sidebar-foreground: oklch(1 0 0);
+  --color-sidebar-primary: oklch(1 0 0);
+  --color-sidebar-primary-foreground: oklch(0 0 0);
+  --color-sidebar-accent: oklch(0.3200 0 0);
+  --color-sidebar-accent-foreground: oklch(1 0 0);
+  --color-sidebar-border: oklch(0.3200 0 0);
+  --color-sidebar-ring: oklch(0.7200 0 0);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  --font-sans: Geist, sans-serif;
+  --font-mono: Geist Mono, monospace;
+  --font-serif: Georgia, serif;
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  --radius-sm: calc(0.5rem - 4px);
+  --radius-md: calc(0.5rem - 2px);
+  --radius-lg: 0.5rem;
+  --radius-xl: calc(0.5rem + 4px);
+
+  --shadow-2xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.09);
+  --shadow-xs: 0px 1px 2px 0px hsl(0 0% 0% / 0.09);
+  --shadow-sm: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 1px 2px -1px hsl(0 0% 0% / 0.18);
+  --shadow: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 1px 2px -1px hsl(0 0% 0% / 0.18);
+  --shadow-md: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 2px 4px -1px hsl(0 0% 0% / 0.18);
+  --shadow-lg: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 4px 6px -1px hsl(0 0% 0% / 0.18);
+  --shadow-xl: 0px 1px 2px 0px hsl(0 0% 0% / 0.18), 0px 8px 10px -1px hsl(0 0% 0% / 0.18);
+  --shadow-2xl: 0px 1px 2px 0px hsl(0 0% 0% / 0.45);
+
+  --spacing: 0.25rem;
+  --tracking-normal: 0em;
 }
