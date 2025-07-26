@@ -2,8 +2,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/shared/navbar";
 import "./globals.css";
-import { TwentyFirstToolbar } from "@21st-extension/toolbar-next";
-import { ReactPlugin } from "@21st-extension/react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,7 +21,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`bg-background ${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`bg-background ${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -33,9 +33,6 @@ export default function RootLayout({ children }) {
           <Navbar />
           {children}
         </ThemeProvider>
-        {process.env.NODE_ENV === "development" && (
-          <TwentyFirstToolbar config={{ plugins: [ReactPlugin] }} />
-        )}
       </body>
     </html>
   );
