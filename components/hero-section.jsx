@@ -1,13 +1,11 @@
 "use client";
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { PiGithubLogoFill, PiLinkedinLogoFill, PiXLogoFill, PiEnvelopeSimpleFill } from "react-icons/pi";
 import { useState, useEffect } from "react";
 
 const HeroSection = () => {
   const [typedText, setTypedText] = useState("");
-
   const fullText = "Full-Stack Developer";
 
-  // Typewriter effect for job title
   useEffect(() => {
     let index = 0;
     const timer = setInterval(() => {
@@ -22,13 +20,11 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className=" flex items-center justify-center px-4 sm:px-6 lg:px-8">
-      {/* Hero Content */}
+    <div className="flex items-center justify-center px-4 sm:px-6 lg:px-8">
       <div className="relative z-10 text-center max-w-2xl mx-auto">
-        {/* Avatar with minimal tech indicators */}
+        {/* Avatar */}
         <div className="relative mx-auto mb-8">
           <div className="relative w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 mx-auto">
-            {/* Main avatar */}
             <div
               className="w-full h-full rounded-full border overflow-hidden relative group"
               style={{
@@ -65,11 +61,11 @@ const HeroSection = () => {
         {/* Social Icons */}
         <div className="flex justify-center gap-4 mb-10">
           {[
-            { icon: Github, href: "https://github.com", label: "GitHub" },
-            { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-            { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-            { icon: Mail, href: "mailto:alex@example.com", label: "Email" },
-          ].map(({ icon: Icon, href, label }) => (
+            { Icon: PiGithubLogoFill, href: "https://github.com", label: "GitHub" },
+            { Icon: PiLinkedinLogoFill, href: "https://linkedin.com", label: "LinkedIn" },
+            { Icon: PiXLogoFill, href: "https://twitter.com", label: "Twitter" },
+            { Icon: PiEnvelopeSimpleFill, href: "mailto:alex@example.com", label: "Email" },
+          ].map(({ Icon, href, label }) => (
             <a
               key={label}
               href={href}

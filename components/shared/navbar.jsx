@@ -2,8 +2,7 @@
 
 import * as React from "react";
 import { useState } from "react";
-import { Menu, X, Sun, Moon } from "lucide-react";
-import { useTheme } from "next-themes";
+import { PiList, PiX } from "react-icons/pi";
 import Link from "next/link";
 import { Logo } from "./Logo";
 const Navbar = () => {
@@ -44,9 +43,9 @@ const Navbar = () => {
               aria-label="Toggle menu"
             >
               {isOpen ? (
-                <X className="h-6 w-6 text-gray-900 dark:text-gray-100" />
+                <PiX className="h-6 w-6 text-gray-900 dark:text-gray-100" />
               ) : (
-                <Menu className="h-6 w-6 text-gray-900 dark:text-gray-100" />
+                <PiList className="h-6 w-6 text-gray-900 dark:text-gray-100" />
               )}
             </button>
           </div>
